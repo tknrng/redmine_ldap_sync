@@ -16,6 +16,10 @@
 # You should have received a copy of the GNU General Public License
 # along with Redmine LDAP Sync.  If not, see <http://www.gnu.org/licenses/>.
 class ActiveSupport::Cache::FileStore
+  def file_path_key(path)
+    fname = path[cache_path.to_s.size..-1].split(File::SEPARATOR, 4).last.gsub(File::SEPARATOR, '')
+    URI.decode_www_form_component(fname, Encoding::UTF_8)
+  end
   def delete_unless
     options = merged_options(options)
     search_dir(cache_path) do |path|
