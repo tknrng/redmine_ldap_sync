@@ -1,6 +1,10 @@
 Redmine LDAP Sync
---- forked from https://github.com/thorin/redmine_ldap_sync, which is unmaintained. Try to make it work with new Redmine (4.x)
+--- forked from https://github.com/thorin/redmine_ldap_sync, which is unmaintained. 
+This maintained version is tested working fine with Redmine4.x/Ruby2.6.x/Rails5.2.x
+Issues and PRs are welcome.
+Redmine site: http://www.redmine.org/plugins/redmine_ldap_sync
 
+Original readme:
 =================
 
 This redmine plugin extends the ldap authentication with user/group
